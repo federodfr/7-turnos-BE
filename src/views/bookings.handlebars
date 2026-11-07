@@ -1,0 +1,23 @@
+<h1>Reservas</h1>
+
+<div class="container">
+    {{#each bookings}}
+        <div class="card">
+            <p>Nombre: {{this.clientName}}</p>
+            <p>Email: {{this.clientEmail}}</p>
+            <p>Fecha: {{this.date}}</p>
+            <p>Hora: {{this.time}}</p>
+            <p>Status: {{this.status}}</p>
+            <p>Servicios reservados</p>
+            <ul>
+                {{#each this.services}}
+                <li><p>Id Servicio: {{this.service}} - Cantidad: {{this.quantity}}</p></li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/each}}
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/bookings.js"></script>

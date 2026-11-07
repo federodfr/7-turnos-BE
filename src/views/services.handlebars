@@ -1,0 +1,18 @@
+<h1>Servicios</h1>
+
+<div class="container">
+    {{#each services}}
+        <div class="card">
+            <p>Nombre: {{this.name}}</p>
+            <p>Descripcion: {{this.description}}</p>
+            <p>Duracion: {{this.duration}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>Categoria: {{this.caterogy}}</p>
+            <p>Disponible: {{this.available}}</p>
+        </div>
+    {{/each}}
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/services.js"></script>
